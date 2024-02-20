@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
-      <Footer></Footer>
       <ContactUs></ContactUs>
       <ProductDetail></ProductDetail>
+      <Footer></Footer>
     </>
   )
 }
