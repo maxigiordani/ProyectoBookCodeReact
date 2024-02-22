@@ -1,9 +1,10 @@
-.container {
+.containerdetail {
     border: 1px solid var(--fuente-color-secundario);
     border-radius: 15px;
     overflow: hidden;
     position: relative;
     transition: box-shadow 0.3s ease-in-out;
+    
   }
   
   .container:hover {
