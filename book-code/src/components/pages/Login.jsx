@@ -4,7 +4,7 @@ import '../../stylesheet/Login.css';
 
 function Login() {
   return (
-    <div className="container mt-5">
+    <div className="container containerlogin mt-5">
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="mb-4" id='card'>
@@ -24,7 +24,7 @@ function Login() {
                 </div>
                 <div className="mb-2 form-check form-check-inline d-flex align-items-center justify-content-center">
                   <input type="checkbox" className="form-check-input" id="recordar" />
-                  <label className="form-check-label mb-0" htmlFor="recordar">Recordar sesión</label>
+                  <label className="form-check-label mx-2" htmlFor="recordar">Recordar sesión</label>
                 </div>
                 <div className="mb-4 text-center">
                   <button type="submit" className="btn botonlogin btn-block">Iniciar sesión</button>

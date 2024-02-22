@@ -12,7 +12,7 @@
 
 .container-fluid {
 	background-color: white;
-	width: 60%;
+	width: 90%;
 	border-radius: 20px;
 	transition: box-shadow 0.3s ease-in-out;
 	border: 2px solid black;
@@ -34,15 +34,5 @@
 	background-color: var(--color-secundario);
 }
 
-.formularios {
-margin-left: -100px;
- width: 1000px;
-  }
 
-  .formularioimput {
-	margin-left: -90px;
-  }
 
-  .imputregistro {
-	max-width: 90%;
-  }

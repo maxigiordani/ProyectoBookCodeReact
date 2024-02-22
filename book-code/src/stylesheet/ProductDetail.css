@@ -14,6 +14,9 @@
   
   .containercomentarios{
     background-color:var(--fuente-color-primario);
+    border-radius: 10px;
+    border: 2px solid var(--color-primario);
+	padding: 20px;
     
 
   }

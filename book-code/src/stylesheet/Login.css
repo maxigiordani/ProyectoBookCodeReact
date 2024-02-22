@@ -33,3 +33,11 @@ color: black;
  .mensajelogin:hover {
     color: red;
  }
+
+ .containerlogin {
+   
+    border-radius: 10px;
+    border: 2px solid var(--color-primario);
+	padding: 20px;
+
+ }
