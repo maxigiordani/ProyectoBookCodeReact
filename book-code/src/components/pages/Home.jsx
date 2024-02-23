@@ -36,7 +36,7 @@ function Home() {
                 <h5 className="mt-2">TAYLOR:</h5>
                 <p>FROM THE VAULT</p>
               </div>
-              <Link to="/" className="btn btn-primary disenoBoton">
+              <Link to="productdetail" className="btn btn-primary disenoBoton">
                 Leer
               </Link>
             </div>
