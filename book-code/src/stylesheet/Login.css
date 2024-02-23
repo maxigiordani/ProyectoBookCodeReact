@@ -1,23 +1,5 @@
-.containerlogin {
-    text-align: center;
-}
-
-#card {
-    width: 600px;
-    height: 550px; 
-    margin: 0 auto; 
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px 0px var(--fuente-color-secundarioDos);
-    transition: box-shadow 0.3s ease-in-out;
-    padding: 25px;
-}
-
-#card:hover {
-    box-shadow: 0px 0px 25px 0px var(--color-secundarioDos);
-}
-
 .botonlogin {
+    color: var(	--fuente-color-primario);
     margin-top: 20px;
     background-color: var(--color-secundarioDos);
     border: none;
@@ -30,19 +12,6 @@
     background-color: var(--color-secundario);
 }
 
-.imagenbannerlogin {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 15px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.imagenbannerlogin:hover {
-    transform: scale(1.05);
-
-}
-
-
 .links {
     text-decoration: none;
     color: var(--color-primario);
@@ -52,13 +21,26 @@
     color: var(--color-secundarioDos);
 }
 
-.user-icon{
+.user-icon {
     margin: 20px;
 }
-.mensajelogin {
-color: black;
- }
 
- .mensajelogin:hover {
-    color: red;
- }
+.mensajelogin {
+    color: var(--fuente-color-secundario);
+}
+
+.mensajelogin:hover {
+    color: var(--color-secundarioDos);
+}
+
+.containerlogin {
+
+    border-radius: 10px;
+    border: 2px solid var(--color-primario);
+    padding: 20px;
+
+}
+
+.containerlogin:hover {
+    box-shadow: 0px 5px 15px var(--color-secundarioDos);
+}
