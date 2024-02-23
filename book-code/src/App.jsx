@@ -10,7 +10,7 @@ import Home from "./components/pages/Home";
 function App() {
   return (
     <>
-       <Home></Home>
+     <Home></Home>
       <ContactUs></ContactUs>
       <ProductDetail></ProductDetail>
       <Login></Login>
