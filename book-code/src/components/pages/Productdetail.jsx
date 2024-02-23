@@ -12,7 +12,7 @@ import libroanimado from '../../img/logorem.png';
 function ProductDetail() {
   return (
     <>
-      <Container className="mt-5">
+      <Container className="mt-5 containerdetail">
         <Row>
           <Col md={5}>
             <img src={libroBritney} alt="Portada del Libro" className="img-fluid estiloimg" />

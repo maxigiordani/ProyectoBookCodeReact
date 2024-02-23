@@ -1,5 +1,5 @@
 .fondoColor {
-	background-color: var(--fuente-color-secundario) ;
+	background-color: var(--fuente-color-secundario);
 }
 
 .colorLetra {
@@ -18,5 +18,5 @@
 
 a {
 	color: var(--fuente-color-primario);
-    text-decoration: none; 
-   }
+	text-decoration: none;
+}
