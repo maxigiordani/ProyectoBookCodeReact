@@ -6,8 +6,6 @@ import ProductDetail from "./components/pages/Productdetail";
 import Register from "./components/pages/Register";
 import Login from "./components/pages/Login";
 
-
-
 function App() {
   return (
     <>
@@ -19,5 +17,8 @@ function App() {
     </>
   );
 }
+
+// aqui se coontrolan los componentes
+// aqui van todos los componentes en comun en todas las páginas
 
 export default App;

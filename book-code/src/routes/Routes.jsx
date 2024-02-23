@@ -1,7 +1,13 @@
+import { Routes, Route } from "react-router-dom";
+import Home from ''
+import Page404 from ''
 
 const Routes = () => {
   return (
-    <div>Routes</div>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Page404 />} />
+      </Routes>
   )
 }
 
