@@ -8,8 +8,8 @@ import imgCinco from '../../../src/img/libroElDuelo.png';
 
 function Home() {
     return (
-        <div className="containerDiseno">
-            <div class="disenoImg mt-3 mb-5">
+        <div className='containerDiseno'>
+            <div className='disenoImg mt-3 mb-5'>
                 <img src={imgUno} alt="libro: Estrellas del mundial" />
                 <img src={imgDos} alt="libro: El hombre en busca de sentido" />
                 <img src={imgTres} alt="libro: La psicologia del dinero" />
