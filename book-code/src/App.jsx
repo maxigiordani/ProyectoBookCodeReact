@@ -10,7 +10,7 @@ import Page404 from "./components/pages/Page404";
 function App() {
   return (
     <>
-      <ContactUs></ContactUs>
+      <ContactUs nombre= "Nombre" ></ContactUs>
       <ProductDetail></ProductDetail>
       <Login></Login>
       <Register></Register>
