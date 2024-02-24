@@ -5,6 +5,7 @@ import ContactUs from "./components/pages/ConctactUs";
 import ProductDetail from "./components/pages/Productdetail";
 import Register from "./components/pages/Register";
 import Login from "./components/pages/Login";
+import Page404 from "./components/pages/Page404";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Login></Login>
       <Register></Register>
       <Footer></Footer>
+      <Page404 />
     </>
   );
 }
