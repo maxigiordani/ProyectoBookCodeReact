@@ -4,7 +4,7 @@ import '../../stylesheet/Login.css';
 
 function Login() {
   return (
-    <div className="container containerlogin mt-5">
+    <div className="container containerlogin mt-5 mb-5">
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="mb-4" id='card'>
