@@ -5,10 +5,12 @@ import ContactUs from "./components/pages/ConctactUs";
 import ProductDetail from "./components/pages/Productdetail";
 import Register from "./components/pages/Register";
 import Login from "./components/pages/Login";
+import Home from "./components/pages/Home";
 
 function App() {
   return (
     <>
+     <Home></Home>
       <ContactUs></ContactUs>
       <ProductDetail></ProductDetail>
       <Login></Login>
