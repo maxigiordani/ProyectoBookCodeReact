@@ -1,4 +1,3 @@
-import React from 'react'
 import '../../stylesheet/Home.css';
 import { Link } from "react-router-dom";
 import imgUno from '../../img/libroEstrellasDelMundial.png';

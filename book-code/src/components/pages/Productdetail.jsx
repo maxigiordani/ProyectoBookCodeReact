@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container,Form, Row, Col } from 'react-bootstrap';
 import libroBritney from '../../img/libroBritney.jpg';
 import '../../stylesheet/ProductDetail.css';
