@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <ContactUs nombre= "Nombre" ></ContactUs>
+      <Home></Home>
       <ProductDetail></ProductDetail>
       <Login></Login>
       <Register></Register>
