@@ -26,8 +26,8 @@
 	justify-content: center;
 	text-align: center;
 
+}
 /* section */
-
 .card {
 	background-color: var(--color-fondo);
 	border: none;
@@ -71,5 +71,5 @@ h6 {
 }
   
 .containerdiseno {
-    background-color: var(--color-fondo)
-}
+    background-color: var(--color-fondo);
+} 
