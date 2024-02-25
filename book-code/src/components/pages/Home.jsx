@@ -1,6 +1,11 @@
-import React from "react";
+import React from 'react'
+import '../../stylesheet/Home.css';
 import { Link } from "react-router-dom";
-import "../../stylesheet/Home.css";
+import imgUno from '../../img/libroEstrellasDelMundial.png';
+import imgDos from '../../img/libroElHombreEnBuscaDeSentido.png';
+import imgTres from '../../img/libroLaPsicologiaDelDinero.png';
+import imgCuatro from '../../img/libroPensamientosNutritivos.png';
+import imgCinco from '../../img/libroElDuelo.png';
 import libroTaylor from "../../img/libroTaylor.png";
 import misDiasenlaLibreria from "../../img/misDiasenlaLibreria.png";
 import libroRosario from "../../img/libroRosario.png";
@@ -14,9 +19,22 @@ import libroEstedolorNoesmio from "../../img/libroEstedolorNoesmio.png";
 import libroLanata from "../../img/libroLanata.png";
 import libroElpoderdelasPalabras from "../../img/libroElpoderdelasPalabras.png";
 
+export default Home
+
 function Home() {
   return (
-    <div className="container-fluid bg-white mt-3 mb-5">
+    <>
+      <div className='containerDiseno'>
+            <div className='disenoImg mt-3 mb-5'>
+                <img src={imgUno} alt="libro: Estrellas del mundial" />
+                <img src={imgDos} alt="libro: El hombre en busca de sentido" />
+                <img src={imgTres} alt="libro: La psicologia del dinero" />
+                <img src={imgCuatro} alt="libro: Pensamientos nutritivos" />
+                <img src={imgCinco} alt="libro: El duelo" />
+            </div>
+        </div>
+
+     <div className="container-fluid bg-white mt-3 mb-5">
       <section>
         <div className="container-fluid containerdiseno">
           <div className="row mt-5 mb-5 justify-content-evenly">
@@ -236,6 +254,7 @@ function Home() {
         </div>
       </section>
     </div>
+   </>
   );
 }
 
