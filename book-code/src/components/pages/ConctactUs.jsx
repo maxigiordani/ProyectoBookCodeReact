@@ -7,7 +7,7 @@ import { faFacebookSquare, faTwitterSquare, faInstagramSquare } from '@fortaweso
 import '../../stylesheet/Contactus.css';
 import { PropTypes } from 'prop-types';
 
-function ContactUs({nombre}) {
+function ContactUs({nombre,correo,mensaje }) {
 
   return (
     <Fragment>
@@ -24,11 +24,11 @@ function ContactUs({nombre}) {
                 <Form.Control type="text" id="nombre" name="nombre" required />
               </Form.Group>
               <Form.Group className="mb-3">
-                <Form.Label htmlFor="email">Correo electrónico:</Form.Label>
+                <Form.Label htmlFor="email">{correo}</Form.Label>
                 <Form.Control type="email" id="email" name="email" required />
               </Form.Group>
               <Form.Group className="mb-3">
-                <Form.Label htmlFor="mensaje">Mensaje:</Form.Label>
+                <Form.Label htmlFor="mensaje">{mensaje}</Form.Label>
                 <Form.Control as="textarea" id="mensaje" name="mensaje" rows="4" required />
               </Form.Group>
               <div className="text-center">

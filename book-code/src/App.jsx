@@ -11,11 +11,27 @@ import Page404 from "./components/pages/Page404";
 function App() {
   return (
     <>
-      <ContactUs nombre= "Nombre" ></ContactUs>
+  <ContactUs
+  nombre="Nombre:"
+  correo="Correo:"
+  mensaje="Mensaje:"
+
+  ></ContactUs>
       <Home></Home>
       <ProductDetail></ProductDetail>
-      <Login></Login>
-      <Register></Register>
+      <Login usuario="Nombre de usuario:"
+       contrasena="Contraseña:">
+       </Login>
+       <Register
+        nombre="Nombre:"
+        apellido="Apellido:"
+        email="Email:"
+        domicilio="Domicilio:"
+        telefono="Teléfono:"
+        postal="Código postal:"
+        usuario="Usuario:"
+        contrasena="Contraseña:"
+      ></Register>
       <Footer></Footer>
       <Page404 />
     </>

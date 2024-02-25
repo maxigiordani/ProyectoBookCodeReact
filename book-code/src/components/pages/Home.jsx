@@ -19,7 +19,7 @@ import libroEstedolorNoesmio from "../../img/libroEstedolorNoesmio.png";
 import libroLanata from "../../img/libroLanata.png";
 import libroElpoderdelasPalabras from "../../img/libroElpoderdelasPalabras.png";
 
-export default Home
+
 
 function Home() {
   return (
