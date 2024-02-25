@@ -1,10 +1,10 @@
 import React from 'react'
-import '../../../src/stylesheet/Home.css';
-import imgUno from '../../../src/img/libroEstrellasDelMundial.png';
-import imgDos from '../../../src/img/libroElHombreEnBuscaDeSentido.png';
-import imgTres from '../../../src/img/libroLaPsicologiaDelDinero.png';
-import imgCuatro from '../../../src/img/libroPensamientosNutritivos.png';
-import imgCinco from '../../../src/img/libroElDuelo.png';
+import '../../stylesheet/Home.css';
+import imgUno from '../../img/libroEstrellasDelMundial.png';
+import imgDos from '../../img/libroElHombreEnBuscaDeSentido.png';
+import imgTres from '../../img/libroLaPsicologiaDelDinero.png';
+import imgCuatro from '../../img/libroPensamientosNutritivos.png';
+import imgCinco from '../../img/libroElDuelo.png';
 
 function Home() {
     return (
