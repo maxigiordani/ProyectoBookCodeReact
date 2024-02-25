@@ -7,8 +7,6 @@ import usuario2 from '../../img/usuario2.jpeg';
 import usuario3 from '../../img/usuario3.avif';
 import libroanimado from '../../img/logorem.png';
 
-
-
 function ProductDetail() {
   return (
     <>
@@ -22,7 +20,7 @@ function ProductDetail() {
           </Col>
           <Col md={6}>
             <h1 className="mb-5 mt-5 estilotitulo">LA MUJER QUE SOY</h1>
-            <p className="estiloparrafo">Autor: Britney Spears</p>
+            <p className="estiloparrafo">..</p>
             <p className="estiloparrafo">Género: Autobiográfico</p>
             <p className="estiloparrafo">Descripción: La cantante, conocida como «La princesa del pop», comparte su historia y experiencias personales, ofreciendo una mirada íntima a su vida tras liberarse de la tutela de su padre.</p>
             <p className="estiloparrafo">Editorial: Simon Schuster (21 octubre 2023)</p>
