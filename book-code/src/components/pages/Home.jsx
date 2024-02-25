@@ -1,23 +1,22 @@
-import React from 'react'
 import '../../stylesheet/Home.css';
 import { Link } from "react-router-dom";
-import imgUno from '../../img/libroEstrellasDelMundial.png';
-import imgDos from '../../img/libroElHombreEnBuscaDeSentido.png';
-import imgTres from '../../img/libroLaPsicologiaDelDinero.png';
-import imgCuatro from '../../img/libroPensamientosNutritivos.png';
-import imgCinco from '../../img/libroElDuelo.png';
-import libroTaylor from "../../img/libroTaylor.png";
-import misDiasenlaLibreria from "../../img/misDiasenlaLibreria.png";
-import libroRosario from "../../img/libroRosario.png";
-import libroSpreen from "../../img/libroSpreen.png";
-import libroElartedeViajar from "../../img/libroElartedeViajar.png";
-import libroVidaReal from "../../img/libroVidaReal.png";
-import libroCuadra from "../../img/libroCuadra.png";
-import libroDiariodeunaSoledad from "../../img/libroDiariodeunaSoledad.png";
-import libroBritney from "../../img/libroBritney.jpg";
-import libroEstedolorNoesmio from "../../img/libroEstedolorNoesmio.png";
-import libroLanata from "../../img/libroLanata.png";
-import libroElpoderdelasPalabras from "../../img/libroElpoderdelasPalabras.png";
+import imgUno from '../../img/imgCarousel/libroEstrellasDelMundial.png';
+import imgDos from '../../img/imgCarousel/libroElHombreEnBuscaDeSentido.png';
+import imgTres from '../../img/imgCarousel/libroLaPsicologiaDelDinero.png';
+import imgCuatro from '../../img/imgCarousel/libroPensamientosNutritivos.png';
+import imgCinco from '../../img/imgCarousel/libroElDuelo.png';
+import libroTaylor from "../../img/imgBook-cards/libroTaylor.png";
+import misDiasenlaLibreria from "../../img/imgBook-cards/misDiasenlaLibreria.png";
+import libroRosario from "../../img/imgBook-cards/libroRosario.png";
+import libroSpreen from "../../img/imgBook-cards/libroSpreen.png";
+import libroElartedeViajar from "../../img/imgBook-cards/libroElartedeViajar.png";
+import libroVidaReal from "../../img/imgBook-cards/libroVidaReal.png";
+import libroCuadra from "../../img/imgBook-cards/libroCuadra.png";
+import libroDiariodeunaSoledad from "../../img/imgBook-cards/libroDiariodeunaSoledad.png";
+import libroBritney from "../../img/imgBook-cards/libroBritney.jpg";
+import libroEstedolorNoesmio from "../../img/imgBook-cards/libroEstedolorNoesmio.png";
+import libroLanata from "../../img/imgBook-cards/libroLanata.png";
+import libroElpoderdelasPalabras from "../../img/imgBook-cards/libroElpoderdelasPalabras.png";
 
 function Home() {
   return (
