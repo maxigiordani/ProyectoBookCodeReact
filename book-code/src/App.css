@@ -53,3 +53,13 @@ body {
 	font-size: var(--fuente-tamanio-parrafo);
 	line-height: 2rem;
 }
+
+.imgLogo {
+	width: 200px;
+}
+
+.botonBuscar {
+	background-color: var(--color-secundarioDos);
+	color: white;
+	border: none;
+}
