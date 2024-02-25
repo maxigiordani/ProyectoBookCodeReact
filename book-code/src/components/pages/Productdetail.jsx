@@ -1,10 +1,10 @@
 import { Container,Form, Row, Col } from 'react-bootstrap';
-import libroBritney from '../../img/libroBritney.jpg';
+import libroBritney from '../../img/imgBook-cards/libroBritney.jpg';
 import '../../stylesheet/ProductDetail.css';
 import usuario1 from '../../img/usuario1.jpg';
 import usuario2 from '../../img/usuario2.jpeg';
 import usuario3 from '../../img/usuario3.avif';
-import libroanimado from '../../img/logorem.png';
+import libroanimado from '../../img/logos/logo-removebg.png';
 
 function ProductDetail() {
   return (

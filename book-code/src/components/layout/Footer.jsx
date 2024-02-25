@@ -1,6 +1,6 @@
 import '../../stylesheet/Footer.css';
 import { FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'; 
-import logo from '../../img/logoNegro.png'; 
+import logo from '../../img/logos/logoNegro.png'; 
 
 
 function Footer() {
