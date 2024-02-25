@@ -6,13 +6,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../../stylesheet/Navigator.css'
 import imgLogo from '../../img/logo.png'
+import { useNavigate } from "react-router-dom"
 
 const Navigator = () => {
+
+  const navigate = useNavigate()
+
   return (
     <>
       <Navbar expand="lg" className="bg-white">
         <Container fluid>
-          <Navbar.Brand href=""><img src={imgLogo} className='imgLogo' alt='logoBookCode'></img></Navbar.Brand>
+          <Navbar.Brand href=""onClick={() => navigate("/")}><img src={imgLogo} className='imgLogo' alt='logoBookCode'></img></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -20,7 +24,7 @@ const Navigator = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="" className='tamanoLetra'>Contacto</Nav.Link>
+              <Nav.Link href="" className='tamanoLetra' onClick={() => navigate("ConctactUs")}>Contacto</Nav.Link>
               <Nav.Link href=""className='tamanoLetra'>Iniciar sesión</Nav.Link>
             </Nav>
             <Form className="d-flex w-50">
