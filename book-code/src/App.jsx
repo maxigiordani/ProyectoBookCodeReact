@@ -7,10 +7,12 @@ import Register from "./components/pages/Register";
 import Login from "./components/pages/Login";
 import Home from "./components/pages/Home";
 import Page404 from "./components/pages/Page404";
+import Navigator from "./components/layout/Navigator";
 
 function App() {
   return (
     <>
+      <Navigator />
       <ContactUs nombre= "Nombre" ></ContactUs>
       <Home></Home>
       <ProductDetail></ProductDetail>
