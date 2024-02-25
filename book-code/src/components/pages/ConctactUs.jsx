@@ -9,7 +9,7 @@ import '../../stylesheet/Contactus.css';
 function ContactUs() {
   return (
     <Fragment>
-      <Container className="containerform mt-4 formulario">
+      <Container className="containerform mt-5 mb-5 formulario">
         <h1 className="text-center mt-2">CONTÁCTENOS</h1>
         <Row>
           <Col>
