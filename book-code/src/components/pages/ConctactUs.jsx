@@ -5,11 +5,13 @@ import imgBanner from '../../img/imgBanner.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faTwitterSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
 import '../../stylesheet/Contactus.css';
+import { PropTypes } from 'prop-types';
 
-function ContactUs() {
+function ContactUs({nombre}) {
+
   return (
     <Fragment>
-      <Container className="containerform mt-4 formulario">
+      <Container className="containerform mt-5 mb-5 formulario">
         <h1 className="text-center mt-2">CONTÁCTENOS</h1>
         <Row>
           <Col>
@@ -18,7 +20,7 @@ function ContactUs() {
           <Col>
             <Form>
               <Form.Group className="mb-2">
-                <Form.Label htmlFor="nombre">Nombre:</Form.Label>
+                <Form.Label htmlFor="nombre">{nombre}</Form.Label>
                 <Form.Control type="text" id="nombre" name="nombre" required />
               </Form.Group>
               <Form.Group className="mb-3">
@@ -49,6 +51,11 @@ function ContactUs() {
       </Container>
     </Fragment>
   );
+}
+
+ContactUs.propTypes = {
+  nombre: PropTypes.string,
+
 }
 
 export default ContactUs;

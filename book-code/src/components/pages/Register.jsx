@@ -4,7 +4,7 @@ import '../../stylesheet/Register.css';
 
 function Register() {
   return (
-    <div className="container-fluid mt-4 mb-5 ">
+    <div className="container-fluid contenedorregistro mt-4 mb-5 ">
       <div className="row justify-content-center">
         <div className="col-md-4 col-lg-10">
           <div className="text-center mt-4 tituloregistro">

@@ -1,0 +1,75 @@
+/* estilos de upperSection */
+.disenoImg {
+	display: flex;
+	width: 600px;
+	height: 430px;
+}
+
+.disenoImg img {
+	width: 0px;
+	flex-grow: 1;
+	object-fit: cover;
+	opacity: .8;
+	transition: .5s ease;
+}
+
+.disenoImg img:hover {
+	cursor: crosshair;
+	width: 300px;
+	opacity: 1;
+	filter: contrast(120%);
+}
+
+.containerDiseno {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+/* section */
+
+.card {
+	background-color: var(--color-fondo);
+	border: none;
+}
+
+.card-img-top {
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+.card-body {
+	margin: 10px;
+	padding: auto;
+	font-size: small;
+}
+
+.disenoBoton {
+	width: 70px;
+	height: 40px;
+	margin: auto;
+	padding: auto;
+	background-color: var(--color-secundarioDos);
+	border: none;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+
+.disenoBoton:hover {
+	background-color: var(--color-secundario);
+}
+
+.disenoTitulo {
+	font-family: var(--fuente-principal);
+	font-weight: bold;
+	color: var(--fuente-color-secundarioDos);
+}
+
+h6 {
+	font-family: var(--fuente-principal);
+	font-weight: bold;
+	color: var(--fuente-color-secundario);
+}
+  
+.containerdiseno {
+    background-color: var(--color-fondo)
+}
