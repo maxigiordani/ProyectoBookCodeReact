@@ -1,0 +1,17 @@
+.imgLogo {
+	width: 200px;
+}
+
+.botonBuscar {
+	background-color: var(--color-secundarioDos);
+	color: white;
+	border: none;
+}
+
+.tamanoLetra {
+    font-size: 22px;
+}
+
+.botonBuscar:hover {
+    background-color: var(--color-secundario);
+}
