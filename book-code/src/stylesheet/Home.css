@@ -1,4 +1,5 @@
 /* estilos de upperSection */
+
 .disenoImg {
 	display: flex;
 	width: 600px;
@@ -25,6 +26,7 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+}
 
 }
 /* section */
