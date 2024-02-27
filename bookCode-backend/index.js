@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import bodyParser from 'body-parser'
+import cors  from 'cors'
 import registerRouter from './src/routes/register.js'
 import loginRouter from './src/routes/login.js'
 import libroRouter from './src/routes/libro.js'
@@ -9,6 +10,8 @@ dotenv.config()
 const app = express()
 
 import './src/model/user.js'
+
+app.use(cors())
 
 const port = process.env.PORT || 3000
 

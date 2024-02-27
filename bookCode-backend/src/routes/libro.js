@@ -4,6 +4,6 @@ import {verificarToken} from "../middlewares/verificarToken.js"
 
 const libroRouter = Router()
 
-libroRouter.get('/home',verificarToken,obtenerLibros )
+libroRouter.get('/home',obtenerLibros )
 
 export default libroRouter
