@@ -23,8 +23,8 @@ const Navigator = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="" className='tamanoLetra' onClick={() => navigate("/ConctactUs")}>Contacto</Nav.Link>
-              <Nav.Link href=""className='tamanoLetra'>Iniciar sesión</Nav.Link>
+              <Nav.Link href="" className='tamanoLetra' onClick={() => navigate("/contactus")}>Contacto</Nav.Link>
+              <Nav.Link href=""className='tamanoLetra' onClick={() => navigate("/login")}>Iniciar sesión</Nav.Link>
             </Nav>
             <Form className="d-flex w-50">
               <Form.Control
