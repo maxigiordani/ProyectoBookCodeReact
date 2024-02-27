@@ -28,10 +28,7 @@ function Register({nombre,apellido,email,domicilio,telefono,postal,usuario,contr
                 <Form.Label htmlFor="email">{email}</Form.Label>
                 <Form.Control type="email" id="email" name="email" required minLength="11" maxLength="20" />
               </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label htmlFor="domicilio">{domicilio}</Form.Label>
-                <Form.Control type="text" id="domicilio" name="domicilio" required minLength="6" maxLength="25" />
-              </Form.Group>
+             
               <Row className="mb-3">
                 <Col xs={12} sm={6}>
                   <Form.Label htmlFor="telefono">{telefono}</Form.Label>
