@@ -54,8 +54,9 @@ function ContactUs({nombre,correo,mensaje }) {
 }
 
 ContactUs.propTypes = {
-  nombre: PropTypes.string,
-
+nombre: PropTypes.string,
+correo: PropTypes.string,
+mensaje: PropTypes.string
 }
 
 export default ContactUs;
