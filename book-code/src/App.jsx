@@ -13,11 +13,23 @@ function App() {
   return (
     <>
       <Navigator />
-      <ContactUs nombre= "Nombre" ></ContactUs>
+      <ContactUs
+        nombre="Nombre:"
+        correo="Correo:"
+        mensaje="Mensaje:"
+      ></ContactUs>
       <Home></Home>
       <ProductDetail></ProductDetail>
-      <Login></Login>
-      <Register></Register>
+      <Login 
+      usuario="Nombre de usuario:"
+      contrasena="Contraseña:">
+      </Login>
+      <Register
+        nombre="Nombre:"
+        apellido="Apellido:"
+        email="Email:"
+        contrasena="Contraseña:"
+      ></Register>
       <Footer></Footer>
       <Page404 />
     </>

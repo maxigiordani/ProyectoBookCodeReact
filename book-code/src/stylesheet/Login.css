@@ -44,3 +44,7 @@
 .containerlogin:hover {
     box-shadow: 0px 5px 15px var(--color-secundarioDos);
 }
+
+.textologin {
+    font-size: 20px;
+}
