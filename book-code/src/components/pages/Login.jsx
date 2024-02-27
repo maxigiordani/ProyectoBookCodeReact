@@ -1,9 +1,8 @@
-import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import '../../stylesheet/Login.css';
+import { PropTypes } from "prop-types";
 
-function Login() {
-  
+function Login({usuario, contrasena}) {
   return (
     <div className="container containerlogin mt-5 mb-5">
       <div className="row justify-content-center">
@@ -16,11 +15,11 @@ function Login() {
                   <FaUser className="user-icon" size={50} />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="usuario" className="form-label">Nombre de usuario:</label>
+                  <label htmlFor="usuario" className="form-label textologin">{usuario}</label>
                   <input type="text" className="form-control" id="usuario" required />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="contrasena" className="form-label">Contraseña:</label>
+                  <label htmlFor="contrasena" className="form-label textologin">{contrasena}</label>
                   <input type="password" className="form-control" id="contrasena" required />
                 </div>
                 <div className="mb-2 form-check form-check-inline d-flex align-items-center justify-content-center">
@@ -40,6 +39,11 @@ function Login() {
       </div>
     </div>
   );
+}
+
+Login.propTypes = {
+  usuario: PropTypes.string,
+  contrasena: PropTypes.string
 }
 
 export default Login;
