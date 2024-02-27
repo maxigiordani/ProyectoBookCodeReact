@@ -18,6 +18,7 @@ import libroEstedolorNoesmio from "../../img/imgBook-cards/libroEstedolorNoesmio
 import libroLanata from "../../img/imgBook-cards/libroLanata.png";
 import libroElpoderdelasPalabras from "../../img/imgBook-cards/libroElpoderdelasPalabras.png";
 
+
 function Home() {
   return (
     <>
