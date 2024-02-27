@@ -3,10 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../../stylesheet/Navigator.css'
-import imgLogo from '../../img/logo.png'
 import { useNavigate } from "react-router-dom"
+import imgLogo from '../../img/logos/logo.png'
 
 const Navigator = () => {
 
