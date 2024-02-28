@@ -9,8 +9,6 @@ import libroanimado from '../../img/logos/logo-removebg.png';
 import { libros } from '../../data/data';
 
 function ProductDetail() {
-
- 
   const [libro, setLibro] = useState({})
   const  {id} = useParams()
  
@@ -20,7 +18,6 @@ function ProductDetail() {
     setLibro(libroFound)
     
   }, [libro])
-
   return (
     <>
       <Container className="mt-5 containerdetail">
@@ -50,7 +47,6 @@ function ProductDetail() {
           )}
         </Row>
       </Container>
-
       <Container className="mt-5 containercomentarios mb-5">
         <h1 className="text-center">Comentarios</h1>
         <Form className="form-group">
@@ -95,4 +91,3 @@ function ProductDetail() {
 }
 
 export default ProductDetail;
-

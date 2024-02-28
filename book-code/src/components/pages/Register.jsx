@@ -1,9 +1,10 @@
 import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom'; 
 import '../../stylesheet/Register.css';
 import { PropTypes } from "prop-types";
 
-function Register({nombre,apellido,email,contrasena}) {
+function Register({nombre, apellido, email, contrasena}) {
 
   return (
     <div className="container-fluid contenedorregistro mt-4 mb-5 ">
@@ -37,7 +38,7 @@ function Register({nombre,apellido,email,contrasena}) {
               </Row>
               <div className="text-center mt-5">
                 <Button type="submit" className="btn botonregis">Crear Cuenta</Button>
-                <p className="mt-3">¿Ya tienes cuenta? <a href="" className="black-link" id="linkIniciarSesion">Iniciar Sesión</a></p>
+                <p className="mt-3">¿Ya tienes cuenta? <Link to="/login" className="black-link" id="linkIniciarSesion">Iniciar Sesión</Link></p>
               </div>
             </Form>
           </div>
@@ -53,7 +54,5 @@ Register.propTypes = {
   email: PropTypes.string,
   contrasena: PropTypes.string,
 }
-
-
 
 export default Register;
