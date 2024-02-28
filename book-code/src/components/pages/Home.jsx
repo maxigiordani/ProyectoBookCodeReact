@@ -5,28 +5,20 @@ import imgDos from '../../img/imgCarousel/libroElHombreEnBuscaDeSentido.png';
 import imgTres from '../../img/imgCarousel/libroLaPsicologiaDelDinero.png';
 import imgCuatro from '../../img/imgCarousel/libroPensamientosNutritivos.png';
 import imgCinco from '../../img/imgCarousel/libroElDuelo.png';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useEffect,useState } from 'react';
+import {libros} from '../../data/data.js';
 
 function Home() {
-  const [home, setHome] = useState([]);
-
-  const obtenerCard = async () => {
-    try {
-      const respuesta = await axios.get('http://localhost:4000/home');
-      setHome(respuesta.data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
+  const [home, setHome] = useState([])
+ 
   useEffect(() => {
-    obtenerCard();
-  }, []);
+    setHome(libros)
+  }, [])
 
   return (
     <>
       <div className='containerDiseno'>
+
         <div className='disenoImg mt-3 mb-5'>
           <img src={imgUno} alt="libro: Estrellas del mundial" />
           <img src={imgDos} alt="libro: El hombre en busca de sentido" />
@@ -34,6 +26,7 @@ function Home() {
           <img src={imgCuatro} alt="libro: Pensamientos nutritivos" />
           <img src={imgCinco} alt="libro: El duelo" />
         </div>
+
       </div>
 
       <div className="row mt-5 mb-5 justify-content-evenly">
@@ -49,17 +42,17 @@ function Home() {
             <img
               src={card.imgUrl} 
               className="card-img-top"
-              alt={card.titulo} 
+              alt={`libro: ${card.titulo}`} 
             />
             <div className="card-body">
               <h5 className="mt-2">{card.titulo}</h5>
             </div>
-            <Link to='' className="btn btn-primary disenoBoton">Leer</Link>
+            <Link to={`/productdetail/${card.ID}`} className="btn btn-primary disenoBoton">Leer</Link>
           </div>
         ))}
       </div>
     </>
-  );
+  )
 }
 
 export default Home;
