@@ -1,4 +1,3 @@
-import React from 'react';
 import { Fragment } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import imgBanner from '../../img/imgBanner.jpg';

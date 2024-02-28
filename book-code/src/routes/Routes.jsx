@@ -12,7 +12,7 @@ const Rutas = () => {
       <Route path="/" element={<Home />} />
       <Route path="*" element={<Page404 />} />
       <Route path="/contactus" element={<ContactUs nombre="Nombre:" correo="Correo:" mensaje="Mensaje:" />} />
-      <Route path="/productdetail:id" element= {<ProductDetail />} />
+      <Route path="/productdetail/:id" element= {<ProductDetail />} />
       <Route path="/login" element= {<Login usuario="Nombre de usuario:" contrasena="Contraseña:" />} />
       <Route path="/register" element= {<Register nombre="Nombre:" apellido="Apellido:" email="Email:" contrasena="Contraseña:" />} />
     </Routes>
