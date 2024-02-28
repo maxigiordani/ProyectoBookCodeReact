@@ -10,7 +10,7 @@ export const obtenerLibros = async (req,res) => {
 
 export const obtenerLibro = async (req,res) => {
     try {
-        const {id} = req.body
+        const {id} = req.body.params
 
         const obtLibro = libro.filter(l => l.ID === id)
 
