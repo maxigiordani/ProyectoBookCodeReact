@@ -14,7 +14,7 @@ export const verificarToken = (req,res, next) =>{
     let payload = {}
 
     try {
-        payload = jwt.decode(userToken, process.env.FRASE_SECRETA )
+        payload = jwt.encode(userToken, process.env.FRASE_SECRETA )
     } catch (error) {
         return res.json({error: 'El token es incorrecto'})
     }

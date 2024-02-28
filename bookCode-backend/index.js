@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 import cors  from 'cors'
 import registerRouter from './src/routes/register.js'
 import loginRouter from './src/routes/login.js'
+import logoutRouter from './src/routes/logout.js'
 import libroRouter from './src/routes/libro.js'
 dotenv.config()
 
@@ -20,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true}))
 
 app.use('/',registerRouter)
 app.use('/',loginRouter)
+app.use('/',logoutRouter)
 app.use('/',libroRouter)
 
 app.listen(port, () => {

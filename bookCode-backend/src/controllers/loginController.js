@@ -22,7 +22,7 @@ export const login = async (req,res) => {
     }
 }
 
-const createToken = (user) =>{
+export const createToken = (user) =>{
     const payload ={
         usuarioId: user.id,
         createAt: moment().unix(),
