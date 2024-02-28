@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import '../../stylesheet/Login.css';
 import { PropTypes } from "prop-types";
@@ -43,8 +42,8 @@ function Login({usuario, contrasena}) {
 }
 
 Login.propTypes = {
- usuario: PropTypes.string,
-contrasena: PropTypes.string
+  usuario: PropTypes.string,
+  contrasena: PropTypes.string
 }
 
 export default Login;
