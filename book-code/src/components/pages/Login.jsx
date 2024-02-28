@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
+import { Link } from 'react-router-dom'; 
 import { FaUser } from 'react-icons/fa';
 import '../../stylesheet/Login.css';
 import { PropTypes } from "prop-types";

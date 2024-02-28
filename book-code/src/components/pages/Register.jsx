@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
+import { Link } from 'react-router-dom'; 
 import '../../stylesheet/Register.css';
 import { PropTypes } from "prop-types";
 
@@ -38,7 +38,6 @@ function Register({nombre, apellido, email, contrasena}) {
               </Row>
               <div className="text-center mt-5">
                 <Button type="submit" className="btn botonregis">Crear Cuenta</Button>
-                {/* Utiliza Link en lugar de <a> */}
                 <p className="mt-3">¿Ya tienes cuenta? <Link to="/login" className="black-link" id="linkIniciarSesion">Iniciar Sesión</Link></p>
               </div>
             </Form>
