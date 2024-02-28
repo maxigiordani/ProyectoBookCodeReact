@@ -1,6 +1,7 @@
-import { Container,Form, Row, Col } from 'react-bootstrap';
-import axios from 'axios'
+import { Container, Form, Row, Col } from 'react-bootstrap';
+import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import '../../stylesheet/ProductDetail.css';
 import usuario1 from '../../img/usuario1.jpg';
 import usuario2 from '../../img/usuario2.jpeg';
@@ -8,27 +9,35 @@ import usuario3 from '../../img/usuario3.avif';
 import libroanimado from '../../img/logos/logo-removebg.png';
 
 function ProductDetail() {
-  const [libro,setLibro] = useState([])
+  const [libro, setLibro] = useState([]);
+  const { id } = useParams();
 
-  const obtenerLibro = async(id)=>{
-    const obtener = await axios.get(`http://localhost:4000/productdetail/${id}`)
-     setLibro(obtener.data)
+  const obtenerLibro = async () => {
+    try {
+      const obtener = await axios.get(`http://localhost:4000/productdetail/${id}`);
+      setLibro(obtener.data);
+    } catch (error) {
+      console.error(error);
+    }
   }
-useEffect(() =>{
-  obtenerLibro()
-},[])
+
+  useEffect(() => {
+    obtenerLibro();
+  }, []);
 
   return (
     <>
       <Container className="mt-5 containerdetail">
         <Row>
-          {libro.map((li, id) =>(
-            <><Col md={5} key={id}>
-              <img src={li.imgUrl} alt="Portada del Libro" className="img-fluid estiloimg" />
-              <div className="libro-animado">
-                <img src={libroanimado} alt="Libro Animado" />
-              </div>
-            </Col><Col md={6}>
+          {libro.map((li, index) => (
+            <React.Fragment key={index}>
+              <Col md={5}>
+                <img src={li.imgUrl} alt="Portada del Libro" className="img-fluid estiloimg" />
+                <div className="libro-animado">
+                  <img src={libroanimado} alt="Libro Animado" />
+                </div>
+              </Col>
+              <Col md={6}>
                 <h1 className="mb-5 mt-5 estilotitulo">{li.titulo}</h1>
                 <p className="estiloparrafo">{li.autor}</p>
                 <p className="estiloparrafo">{li.genero}</p>
@@ -38,15 +47,14 @@ useEffect(() =>{
                 <div className="justify-content-center">
                   <a href="/views/error404.html" className="boton-descarga">Descargar libro PDF</a>
                 </div>
-              </Col></>
-          ))} 
+              </Col>
+            </React.Fragment>
+          ))}
         </Row>
       </Container>
 
-     
       <Container className="mt-5 containercomentarios mb-5">
         <h1 className="text-center">Comentarios</h1>
-
         <Form className="form-group">
           <div className="mb-3">
             <label htmlFor="comentario" className="form-label estilocomentario">Comenta aquí</label>
@@ -57,7 +65,6 @@ useEffect(() =>{
             <a href="/views/error404.html" className="btn botoncomentar">Cancelar</a>
           </div>
         </Form>
-
         <div className="mt-5">
           <div className="card cardestilo">
             <div className="card-body cardcuerpo">

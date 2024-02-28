@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import { FaUser } from 'react-icons/fa';
 import '../../stylesheet/Login.css';
 import { PropTypes } from "prop-types";
@@ -29,7 +31,7 @@ function Login({usuario, contrasena}) {
                 <div className="mb-4 text-center">
                   <button type="submit" className="btn botonlogin btn-block">Iniciar sesión</button>
                   <div className="mt-3">
-                    <a href="#" className='mensajelogin'>¿Aún no tienes cuenta?, ¡regístrate!</a>
+                    <Link to="/register" className='mensajelogin'>¿Aún no tienes cuenta?, ¡regístrate!</Link>
                   </div>
                 </div>
               </div>
