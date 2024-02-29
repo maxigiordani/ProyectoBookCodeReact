@@ -9,7 +9,7 @@ const Page404 = () => {
     const navigate = useNavigate()
     return (
         <>
-           <div className="mt-5 mb-5 pagina404">
+           <div className="mt-5 mb-5">
             <Container className="contenedor-404">
                 <Row>
                     <Col className="col-md-6 col-12 text-center">
