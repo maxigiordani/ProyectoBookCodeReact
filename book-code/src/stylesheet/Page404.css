@@ -18,7 +18,7 @@
 
 .parrafo3 {
     color: var(--color-primario);
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .btn-reg {
@@ -47,4 +47,8 @@
     100% {
         transform: translateY(15px);
     }
+}
+
+.pagina404 {
+    height: 70vh; 
 }

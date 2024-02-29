@@ -60,7 +60,7 @@ function ProductDetail() {
           </div>
         </Form>
         <div className="mt-5">
-          <div className="card cardestilo">
+          <div className="cardestilo">
             <div className="card-body cardcuerpo">
               <img src={usuario1} alt="Foto de Perfil" className="rounded-circle usuarioimagen" />
               <h2>Carlos Rodriguez</h2>
@@ -68,7 +68,7 @@ function ProductDetail() {
               <small className="text-muted">Hace 30 minutos</small>
             </div>
           </div>
-          <div className="card cardestilo">
+          <div className=" cardestilo">
             <div className="card-body cardcuerpo">
               <img src={usuario2} alt="Foto de Perfil" className="rounded-circle usuarioimagen" />
               <h2>Patricia Perez</h2>
@@ -76,7 +76,7 @@ function ProductDetail() {
               <small className="text-muted">Hace 120 minutos</small>
             </div>
           </div>
-          <div className="card cardestilo">
+          <div className="cardestilo">
             <div className="card-body cardcuerpo">
               <img src={usuario3} alt="Foto de Perfil" className="rounded-circle usuarioimagen" />
               <h2>Benito Giovanne</h2>

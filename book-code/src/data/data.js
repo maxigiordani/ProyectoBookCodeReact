@@ -68,7 +68,7 @@ export const libros = [
     },
     {
         ID: 7,
-        titulo: "CUADR",
+        titulo: "CUADRA",
         autor: "Maximo Chenin",
         genero: "Novela",
         descripcion: "Con una energía y un dolor latentes, como si no hubieran transcurrido veinticinco años desde la muerte de su hermano, el narrador recuerda cómo fue crecer en Aranjuez, su barrio, en la turbulenta Medellín de finales de los años ochenta. Acorralados por la pobreza, el tedio y la desesperanza, los adolescentes de la cuadra no tenían otra alternativa que la violencia: para ser alguien debían empuñar un arma, sin importarles que a la vuelta los esperara, inevitablemente, la muerte.",

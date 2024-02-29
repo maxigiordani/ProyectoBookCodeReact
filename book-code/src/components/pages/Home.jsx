@@ -30,29 +30,31 @@ function Home() {
       </div>
 
       <div className="row mt-5 mb-5 justify-content-evenly">
-        <h2 className="disenoTitulo ms-4 d-flex justify-content-center mb-5">
+      <h2 className="disenoTitulo ms-4 d-flex justify-content-center mb-5">
           Libros disponibles
         </h2>
-        {home.map((card, index) => (
-          <div
-            key={index}
-            className="card text-center mt-3 mb-3"
-            style={{ width: "12rem" }}
-          >
-            <img
-              src={card.imgUrl} 
-              className="card-img-top"
-              alt={`libro: ${card.titulo}`} 
-            />
-            <div className="card-body">
-              <h5 className="mt-2">{card.titulo}</h5>
+        <div className='containertarjetas mt-4 mb-4'>
+          {home.map((card, index) => (
+            <div
+              key={index}
+              className="card text-center mt-3 mb-3"
+              style={{ width: "12rem" }}
+            >
+              <img
+                src={card.imgUrl} 
+                className="card-img-top"
+                alt={`libro: ${card.titulo}`} 
+              />
+              <div className="card-body">
+                <h5 className="mt-2">{card.titulo}</h5>
+              </div>
+              <Link to={`/productdetail/${card.ID}`} className="btn btn-primary disenoBoton">Leer</Link>
             </div>
-            <Link to={`/productdetail/${card.ID}`} className="btn btn-primary disenoBoton">Leer</Link>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
-  )
+  );
 }
 
 export default Home;
