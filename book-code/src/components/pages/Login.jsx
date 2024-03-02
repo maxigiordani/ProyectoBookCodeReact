@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'; 
 import { FaUser } from 'react-icons/fa';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import '../../stylesheet/Login.css';
 import PropTypes  from "prop-types";
 
@@ -12,15 +12,12 @@ function Login({setUsuario}) {
   const [contrasena, setContrasena] = useState('')
   const [logueado, setLogueado] = useState(false)
 
-  useEffect(() => {
+/*   useEffect(() => {
     const valorStorage = JSON.parse(localStorage.getItem('usuarios'))
-    if (valorStorage) {
-      setEmail(valorStorage.email)
-      setContrasena(valorStorage.contrasena)
-      setUsuario(valorStorage)
-    }
+
+  
    
-  }, [setUsuario])
+  }, [setUsuario]) */
 
 
   const handleSubmit = (e) =>{
@@ -31,13 +28,19 @@ function Login({setUsuario}) {
       }else{
         const valorStorage = JSON.parse(localStorage.getItem('usuarios'))
 
-        if (valorStorage && email === valorStorage.email && contrasena === valorStorage.contrasena) {
-        
-          setUsuario(valorStorage)
-          setLogueado(true)
-        }else{
-          setLogueado(false)
+        if (valorStorage) {
+          const usurioEncontrado = valorStorage.find(usuario => usuario.email === email && usuario.contrasena === contrasena)
+          console.log(usurioEncontrado)
+          if (usurioEncontrado) {
+            setUsuario(usurioEncontrado)
+            setLogueado(true)
+          }else{
+            setLogueado(false)
+          }
+
+          return
         }
+
       }
       
   }
@@ -48,7 +51,7 @@ function Login({setUsuario}) {
         <div className="col-md-6">
           <div className="mb-4" id='card'>
             <h1 className="text-center h2 mt-4 mb-4">INICIAR SESIÓN</h1>
-            <form method={logueado} onSubmit={handleSubmit}>
+            <form method={logueado ?? 'POST'} onSubmit={handleSubmit}>
               <div className="card-body">
                 <div className="mb-3 text-center">
                   <FaUser className="user-icon" size={50} />
@@ -59,7 +62,7 @@ function Login({setUsuario}) {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="contrasena" className="form-label textologin">Contraseña</label>
-                  <input type="password" className="form-control" id="contrasena" value={contrasena} onChange={(e) => setContrasena(e.target.ariaValueMin)} required />
+                  <input type="password" className="form-control" id="contrasena" value={contrasena} onChange={(e) => setContrasena(e.target.value)} required />
                 </div>
                 <div className="mb-2 form-check form-check-inline d-flex align-items-center justify-content-center">
                   <input type="checkbox" className="form-check-input" id="recordar" />
@@ -81,7 +84,7 @@ function Login({setUsuario}) {
 }
 
 Login.propTypes = {
-  usuario: PropTypes.object,
+ /*  usuario: PropTypes.object, */
   setUsuario: PropTypes.func
 }
 

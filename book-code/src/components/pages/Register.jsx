@@ -1,6 +1,7 @@
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; 
+import { Link} from 'react-router-dom'; 
 import { useState,useEffect } from 'react';
+import Swal from 'sweetalert2';
 import Error from './Error';
 import '../../stylesheet/Register.css';
 import  PropTypes  from "prop-types";
@@ -58,6 +59,15 @@ function Register({usuario, usuarios, setUsuarios}) {
     setApellido('')
     setEmail('')
     setContrasena('')
+
+    Swal.fire({
+      icon:'success',
+      title: 'Registro exitoso',
+      text:'Usuario registrado'
+    }).then(() =>{
+      window.location.href= '/login'
+    })
+
   };
 
   return (
@@ -69,7 +79,7 @@ function Register({usuario, usuarios, setUsuarios}) {
           </div>
           <div>
             <Form onSubmit={handleFormSubmit}>
-              {error ? <Error><p>Todos los campos son obligatorios</p></Error>: ''}
+              {error ? <Error><p>Los campos están vacíos</p></Error>: ''}
               <Row className="mb-3">
                 <Col xs={12} sm={6}>
                   <Form.Label htmlFor="nombre">nombre</Form.Label>
@@ -109,4 +119,4 @@ Register.propTypes = {
   setUsuarios: PropTypes.func, 
 }
 
-export default Register;
+export default Register; 
