@@ -1,6 +1,4 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../../stylesheet/Navigator.css'
@@ -10,6 +8,7 @@ import imgLogo from '../../img/logos/logo.png'
 const Navigator = () => {
 
   const navigate = useNavigate()
+
 
   return (
     <>
@@ -26,15 +25,6 @@ const Navigator = () => {
               <Nav.Link href="" className='tamanoLetra' onClick={() => navigate("/contactus")}>Contacto</Nav.Link>
               <Nav.Link href=""className='tamanoLetra' onClick={() => navigate("/login")}>Iniciar sesión</Nav.Link>
             </Nav>
-            <Form className="d-flex w-50">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success" className='botonBuscar'>Search</Button>
-            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>

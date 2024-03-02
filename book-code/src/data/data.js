@@ -1,7 +1,7 @@
 export const libros = [
     {
         ID: 1,
-        titulo: "TYALOR",
+        titulo: "TAYLOR",
         autor: "Anonimo",
         genero: "Biografía",
         descripcion: "Por primera vez; Taylor llega a Latinoamérica y es un punto de inflexión para toda una generación que lleva años esperando disfrutar de sus canciones en vivo y poder tenerla cerca. Por fin llegó lo que tanto deseábamos y nos gustaría tener una enorme caja fuerte para guardar este momento tan valioso; un espacio seguro para conservar nuestros recuerdos más preciados para siempre. Estas páginas intentan convertirse en ese rincón para preservar las mejores eras vividas.",

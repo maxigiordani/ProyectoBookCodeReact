@@ -8,6 +8,7 @@ import Footer from "./components/layout/Footer";
 function App() {
  const [usuarios, setUsuarios] = useState([])
  const [usuario, setUsuario] = useState({})
+ const [logueado, setLogueado] = useState(false)
 
  useEffect(() => {
   const obtenerStorge = () =>{
@@ -32,6 +33,8 @@ function App() {
         setUsuario={setUsuario} 
         usuarios={usuarios}
         setUsuarios={setUsuarios}
+        logueado = {logueado}
+        setLogueado = {setLogueado}
       />
       <Footer />
     </>
