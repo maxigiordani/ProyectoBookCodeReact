@@ -1,4 +1,4 @@
-import { Container,Form, Row, Col } from 'react-bootstrap';
+import { Container, Form, Row, Col } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../stylesheet/ProductDetail.css';
@@ -10,19 +10,20 @@ import { libros } from '../../data/data';
 
 function ProductDetail() {
   const [libro, setLibro] = useState({})
-  const  {id} = useParams()
- 
+  const { id } = useParams()
+
   useEffect(() => {
-    const libroFound = libros.find(l => l.ID=== parseInt(id))
-    
+    const libroFound = libros.find(l => l.ID === parseInt(id))
+
     setLibro(libroFound)
-    
+
   }, [libro])
+
   return (
     <>
       <Container className="mt-5 containerdetail">
         <Row>
-          {!libro ? (<h2>No Hay Libros</h2>) : ( 
+          {!libro ? (<h2>No Hay Libros</h2>) : (
             <div>
               <Col md={5}>
                 <img src={libro.imgUrl} alt="Portada del Libro" className="img-fluid estiloimg" />

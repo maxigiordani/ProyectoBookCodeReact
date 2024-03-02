@@ -9,12 +9,11 @@ const Navigator = () => {
 
   const navigate = useNavigate()
 
-
   return (
     <>
       <Navbar expand="lg" className="bg-white">
         <Container fluid>
-          <Navbar.Brand href=""onClick={() => navigate("/")}><img src={imgLogo} className='imgLogo' alt='logoBookCode'></img></Navbar.Brand>
+          <Navbar.Brand href="" onClick={() => navigate("/")}><img src={imgLogo} className='imgLogo' alt='logoBookCode'></img></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -23,7 +22,7 @@ const Navigator = () => {
               navbarScroll
             >
               <Nav.Link href="" className='tamanoLetra' onClick={() => navigate("/contactus")}>Contacto</Nav.Link>
-              <Nav.Link href=""className='tamanoLetra' onClick={() => navigate("/login")}>Iniciar sesión</Nav.Link>
+              <Nav.Link href="" className='tamanoLetra' onClick={() => navigate("/login")}>Iniciar sesión</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

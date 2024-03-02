@@ -9,9 +9,9 @@
 }
 
 .tamanoLetra {
-    font-size: 22px;
+	font-size: 22px;
 }
 
 .botonBuscar:hover {
-    background-color: var(--color-secundario);
+	background-color: var(--color-secundario);
 }

@@ -1,15 +1,14 @@
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import { Link} from 'react-router-dom'; 
-import { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import Error from './Error';
 import '../../stylesheet/Register.css';
-import  PropTypes  from "prop-types";
+import PropTypes from "prop-types";
 
-
-function Register({usuario, usuarios, setUsuarios}) {
+function Register({ usuario, usuarios, setUsuarios }) {
   const [nombre, setNombre] = useState('')
-  const [apellido,setApellido] = useState('')
+  const [apellido, setApellido] = useState('')
   const [email, setEmail] = useState('')
   const [contrasena, setContrasena] = useState('')
 
@@ -23,9 +22,9 @@ function Register({usuario, usuarios, setUsuarios}) {
       setEmail(usuario.email)
       setContrasena(usuario.contrasena)
     }
-  },[usuario])
+  }, [usuario])
 
-  const generarId = () =>{
+  const generarId = () => {
     const random = Math.random().toString().substring(2)
     const fecha = Date.now().toString(36)
 
@@ -34,12 +33,12 @@ function Register({usuario, usuarios, setUsuarios}) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault(); // Evitar que el formulario se envíe automáticamente  
-    if([nombre,apellido,email,contrasena].includes('')){
+    if ([nombre, apellido, email, contrasena].includes('')) {
       console.log('Hay al menos un campo vacio')
       setError(true)
 
       return
-    } 
+    }
 
     setError(false)
     // Crea el registro de usuario
@@ -50,7 +49,7 @@ function Register({usuario, usuarios, setUsuarios}) {
       contrasena
     }
     registro.id = generarId()
-    setUsuarios([...usuarios,registro])
+    setUsuarios([...usuarios, registro])
 
     console.log(registro.id)
 
@@ -61,11 +60,11 @@ function Register({usuario, usuarios, setUsuarios}) {
     setContrasena('')
 
     Swal.fire({
-      icon:'success',
+      icon: 'success',
       title: 'Registro exitoso',
-      text:'Usuario registrado'
-    }).then(() =>{
-      window.location.href= '/login'
+      text: 'Usuario registrado'
+    }).then(() => {
+      window.location.href = '/login'
     })
 
   };
@@ -79,7 +78,7 @@ function Register({usuario, usuarios, setUsuarios}) {
           </div>
           <div>
             <Form onSubmit={handleFormSubmit}>
-              {error ? <Error><p>Los campos están vacíos</p></Error>: ''}
+              {error ? <Error><p>Los campos están vacíos</p></Error> : ''}
               <Row className="mb-3">
                 <Col xs={12} sm={6}>
                   <Form.Label htmlFor="nombre">nombre</Form.Label>
@@ -116,7 +115,7 @@ Register.propTypes = {
   usuario: PropTypes.object,
   setUsuario: PropTypes.func,
   usuarios: PropTypes.array,
-  setUsuarios: PropTypes.func, 
+  setUsuarios: PropTypes.func,
 }
 
 export default Register; 
