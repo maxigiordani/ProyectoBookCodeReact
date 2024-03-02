@@ -10,10 +10,14 @@ import {
 import "../../stylesheet/Contactus.css";
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
+import WeatherWidget from "../helpers/WeatherWidget"; 
 
 function ContactUs({ nombre, correo, mensaje }) {
   return (
-    <Fragment>
+    <>
+    <div className="text-center mt-4">
+        <WeatherWidget />   
+    </div>
       <Container className="containerform mt-5 mb-5 formulario">
         <h1 className="text-center mt-2">CONTÁCTENOS</h1>
         <Row>
@@ -88,7 +92,7 @@ function ContactUs({ nombre, correo, mensaje }) {
           </Col>
         </Row>
       </Container>
-    </Fragment>
+    </>
   );
 }
 
