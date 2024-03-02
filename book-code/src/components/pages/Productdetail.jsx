@@ -25,7 +25,7 @@ function ProductDetail() {
           {!libro ? (<h2>No Hay Libros</h2>) : ( 
             <div>
               <Col md={5}>
-                <img src={'' + libro.imgUrl} alt="Portada del Libro" className="img-fluid estiloimg" />
+                <img src={libro.imgUrl} alt="Portada del Libro" className="img-fluid estiloimg" />
                 <div className="libro-animado">
                   <img src={libroanimado} alt="Libro Animado" />
                 </div>
@@ -38,7 +38,7 @@ function ProductDetail() {
                 <p className="estiloparrafo">{libro.editorial}</p>
                 <p className="estiloparrafo">{libro.idioma}</p>
                 <div className="justify-content-center">
-                  <a href="/views/error404.html" className="boton-descarga">
+                  <a href={libro.url} className="boton-descarga">
                     Descargar libro PDF
                   </a>
                 </div>
