@@ -18,7 +18,7 @@
 
 .parrafo3 {
     color: var(--color-primario);
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .btn-reg {
@@ -48,3 +48,4 @@
         transform: translateY(15px);
     }
 }
+
