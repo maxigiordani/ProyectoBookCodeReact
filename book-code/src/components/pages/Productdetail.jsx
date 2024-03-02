@@ -1,5 +1,5 @@
-import { Container,Form, Row, Col } from 'react-bootstrap';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import '../../stylesheet/ProductDetail.css';
 import usuario1 from '../../img/usuario1.jpg';
@@ -10,28 +10,35 @@ import { libros } from '../../data/data';
 import { dataimg } from '../../data/dataimg';
 
 function ProductDetail() {
-  const [libro, setLibro] = useState({})
-  const  {id} = useParams()
- 
+  const [libro, setLibro] = useState({});
+  const { id } = useParams();
+
   useEffect(() => {
-    const libroFound = libros.find(l => l.ID=== parseInt(id))
-    
-    setLibro(libroFound)
-    
-  }, [libro])
+    const libroFound = libros.find(l => l.ID === parseInt(id));
+    setLibro(libroFound);
+  }, [id]);
+
+  const getLibroImage = () => {
+    const libroImage = dataimg.find(img => img.ID === libro.ID);
+    return libroImage ? libroImage.imgUrl : ''; 
+  };
+
   return (
     <>
       <Container className="mt-5 containerdetail">
-        <Row>
-          {!libro ? (<h2>No Hay Libros</h2>) : ( 
+        <Row className="imagenportada">
+          {!libro ? (
+            <h2>No Hay Libros</h2>
+          ) : (
             <div>
-              <Col md={5}>
-                <img src={dataimg.imgUrl} alt="Portada del Libro" className="img-fluid estiloimg" />
+              <Col md={5} className="imagenportada">
+                <img src={getLibroImage()} alt="Portada del Libro" className="img-fluid" style={{ padding: '25px' }} />
                 <div className="libro-animado">
                   <img src={libroanimado} alt="Libro Animado" />
                 </div>
               </Col>
               <Col md={6}>
+                
                 <h1 className="mb-5 mt-5 estilotitulo">{libro.titulo}</h1>
                 <p className="estiloparrafo">{libro.autor}</p>
                 <p className="estiloparrafo">{libro.genero}</p>

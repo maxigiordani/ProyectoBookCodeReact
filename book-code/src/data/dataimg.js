@@ -7,7 +7,7 @@ export const dataimg = [
     {
       ID: 2,
   
-      imgUrl: "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/702951.jpg",
+      imgUrl: "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/702951.jpg" ,
     },
     {
       ID: 3,

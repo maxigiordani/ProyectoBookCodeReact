@@ -13,7 +13,7 @@ const Rutas = ({
   usuario,
   setUsuario
 }) => {
-  const autenticado = false; // Debes tener la lógica real para determinar si el usuario está autenticado
+  const autenticado = true; // Debes tener la lógica real para determinar si el usuario está autenticado
 
   return (
     <Routes>
