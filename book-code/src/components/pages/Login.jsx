@@ -4,18 +4,17 @@ import { useState,useEffect} from 'react';
 import '../../stylesheet/Login.css';
 import PropTypes  from "prop-types";
 
-
-
 function Login({setUsuario}) {
 
   const [email, setEmail] = useState('')
   const [contrasena, setContrasena] = useState('')
   const [logueado, setLogueado] = useState(false)
 
+
   useEffect(() => {
     const valorStorage = JSON.parse(localStorage.getItem('usuarios'))
 
-    if (valorStorage.lengt > 0) {
+    if (valorStorage && valorStorage.length > 0) {
       setEmail('')
       setContrasena('')
     }
@@ -33,6 +32,7 @@ function Login({setUsuario}) {
         if (valorStorage) {
           const usurioEncontrado = valorStorage.find(usuario => usuario.email === email && usuario.contrasena === contrasena)
           console.log(usurioEncontrado)
+
           if (usurioEncontrado) {
             setUsuario(usurioEncontrado)
             setLogueado(true)
@@ -86,8 +86,9 @@ function Login({setUsuario}) {
 }
 
 Login.propTypes = {
- /*  usuario: PropTypes.object, */
+  usuario: PropTypes.object,
   setUsuario: PropTypes.func
 }
 
 export default Login;
+
