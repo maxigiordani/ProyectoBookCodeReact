@@ -7,6 +7,7 @@ import usuario2 from '../../img/usuario2.jpeg';
 import usuario3 from '../../img/usuario3.avif';
 import libroanimado from '../../img/logos/logo-removebg.png';
 import { libros } from '../../data/data';
+import { dataimg } from '../../data/dataimg';
 
 function ProductDetail() {
   const [libro, setLibro] = useState({})
@@ -25,7 +26,7 @@ function ProductDetail() {
           {!libro ? (<h2>No Hay Libros</h2>) : ( 
             <div>
               <Col md={5}>
-                <img src={libro.imgUrl} alt="Portada del Libro" className="img-fluid estiloimg" />
+                <img src={dataimg.imgUrl} alt="Portada del Libro" className="img-fluid estiloimg" />
                 <div className="libro-animado">
                   <img src={libroanimado} alt="Libro Animado" />
                 </div>
