@@ -1,7 +1,8 @@
-import '../../stylesheet/Footer.css';
+import React from 'react';
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import { FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'; 
 import logo from '../../img/logos/logoNegro.png'; 
-
+import '../../stylesheet/Footer.css';
 
 function Footer() {
   return (
@@ -9,31 +10,32 @@ function Footer() {
       <div className="container text-center">
         <div className="row">
           <div className="col-md-4">
-            <img src={logo} className="w-100" alt="Logo de Book code" /> {/* Utiliza la variable "logo" como fuente de la imagen */}
+            <img src={logo} className="w-100" alt="Logo de Book code" /> 
           </div>
           <div className="col-md-4 mt-5 colorLetra">
             <h4>Información</h4>
             <hr />
             <ul className="list-unstyled">
-              <li><a href="./views/error404.html">Preguntas frecuentes</a></li>
+              <li><Link to="*">Preguntas frecuentes</Link></li>
               <hr />
-              <li><a href="./views/error404.html">Términos y condiciones</a></li>
+              
+              <li><Link to="*">Términos y condiciones</Link></li>
               <hr />
             </ul>
           </div>
           <div className="col-md-4 mt-4">
             <ul className="list-unstyled">
               <li className="mt-3">
-                <a href="./views/error404.html" className="imgLogo"><FaEnvelope /></a> 
+                <Link to="/contact" className="imgLogo"><FaEnvelope /></Link> 
               </li>
               <li className="mt-3">
-                <a href="./views/error404.html" className="imgLogo"><FaFacebook /></a> 
+                <Link to="https://www.facebook.com/" className="imgLogo"><FaFacebook /></Link> 
               </li>
               <li className="mt-3">
-                <a href="./views/error404.html" className="imgLogo"><FaInstagram /></a> 
+                <Link to="https://www.instagram.com/" className="imgLogo"><FaInstagram /></Link> 
               </li>
               <li className="mt-3">
-                <a href="./views/error404.html" className="imgLogo"><FaTwitter /></a> 
+                <Link to="https://twitter.com/" className="imgLogo"><FaTwitter /></Link> 
               </li>
             </ul>
           </div>
