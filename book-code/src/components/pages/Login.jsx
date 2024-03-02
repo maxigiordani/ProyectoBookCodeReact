@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'; 
 import { FaUser } from 'react-icons/fa';
-import { useState} from 'react';
+import { useState,useEffect} from 'react';
 import '../../stylesheet/Login.css';
 import PropTypes  from "prop-types";
 
@@ -12,12 +12,14 @@ function Login({setUsuario}) {
   const [contrasena, setContrasena] = useState('')
   const [logueado, setLogueado] = useState(false)
 
-/*   useEffect(() => {
+  useEffect(() => {
     const valorStorage = JSON.parse(localStorage.getItem('usuarios'))
 
-  
-   
-  }, [setUsuario]) */
+    if (valorStorage.lengt > 0) {
+      setEmail('')
+      setContrasena('')
+    }
+  }, [setUsuario])
 
 
   const handleSubmit = (e) =>{
