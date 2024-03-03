@@ -11,7 +11,7 @@ export const dataimg = [
     },
     {
       ID: 3,
-      imgUrl: "https://sbslibreria.vteximg.com.br/arquivos/ids/582405-1000-1000/9789500769815.jpg",
+      imgUrl: "https://www.penguinlibros.com/ar/2947110/rosario.jpg",
     },
     {
       ID: 4,

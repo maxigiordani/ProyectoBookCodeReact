@@ -25,6 +25,27 @@ function ProductDetail() {
 
   return (
     <>
+      <h1 className="mb-5 mt-5 estilotitulo text-center">{libro.titulo}</h1>
+
+    <div className=' mt-5 mb-5 text-center'> 
+   <img src={getLibroImage()} alt="Portada del Libro" className='imagenportada'  />
+   </div>
+
+   <div className=' container descripcionlibros text-center'>
+                <h3 className='h2 mt-3'>INFORMACION DEL LIBRO: </h3>
+                <p className="estiloparrafo">Autor: {libro.autor}</p>
+                <p className="estiloparrafo">Genéro: {libro.genero}</p>
+                <p className="estiloparrafo">Descripción : {libro.descripcion}</p>
+                <p className="estiloparrafo">Editorial: {libro.editorial}</p>
+                <p className="estiloparrafo">Idioma: {libro.idioma}</p>
+                <div className="justify-content-center">
+                  <a href={libro.url} className="boton-descarga mb-2">
+                    Descargar libro PDF
+                  </a>
+                </div>
+              </div>
+
+  
       <Container className="mt-5 containerdetail">
         <Row className="imagenportada">
           {!libro ? (
@@ -32,25 +53,12 @@ function ProductDetail() {
           ) : (
             <div>
               <Col md={5} className="imagenportada">
-                <img src={getLibroImage()} alt="Portada del Libro" className="img-fluid" style={{ padding: '25px' }} />
+               
                 <div className="libro-animado">
                   <img src={libroanimado} alt="Libro Animado" />
                 </div>
               </Col>
-              <Col md={6}>
-                
-                <h1 className="mb-5 mt-5 estilotitulo">{libro.titulo}</h1>
-                <p className="estiloparrafo">{libro.autor}</p>
-                <p className="estiloparrafo">{libro.genero}</p>
-                <p className="estiloparrafo">{libro.descripcion}</p>
-                <p className="estiloparrafo">{libro.editorial}</p>
-                <p className="estiloparrafo">{libro.idioma}</p>
-                <div className="justify-content-center">
-                  <a href={libro.url} className="boton-descarga">
-                    Descargar libro PDF
-                  </a>
-                </div>
-              </Col>
+             
             </div>
           )}
         </Row>
