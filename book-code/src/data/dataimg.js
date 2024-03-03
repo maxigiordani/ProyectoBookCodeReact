@@ -28,11 +28,11 @@ export const dataimg = [
     },
     {
       ID: 7,
-      imgUrl: "https://sbslibreria.vteximg.com.br/arquivos/ids/595328-1000-1000/9789878499222.jp",
+      imgUrl: "https://http2.mlstatic.com/D_NQ_NP_940525-MLA73120656849_112023-O.webp",
     },
     {
       ID: 8,
-      imgUrl: "https://http2.mlstatic.com/D_NQ_NP_852299-MLA72123155102_102023-O.webp",
+      imgUrl: "https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/06a48096-417b-4233-a16f-e78c2425d9fc/9788416529940_cc298532-e139-40dd-969d-e39a0c9c61fe.jpg",
     },
     {
       ID: 9,
