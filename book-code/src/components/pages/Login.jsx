@@ -37,7 +37,7 @@ function Login({ setUsuario, logueado, setLogueado }) {
   }
   const contenidoLogin = logueado ? (
     <div>
-      <p>Bienvenido, {email}!</p>
+      <p>Bienvenido/a! {email}!</p>
       <button onClick={() => {
         setLogueado(false);
         navigate('/login');
