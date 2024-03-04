@@ -6,32 +6,35 @@ import Rutas from "../src/routes/Routes";
 import Footer from "./components/layout/Footer";
 
 function App() {
- const [usuarios, setUsuarios] = useState([])
- const [usuario, setUsuario] = useState({})
+  const [usuarios, setUsuarios] = useState([])
+  const [usuario, setUsuario] = useState({})
+  const [logueado, setLogueado] = useState(false)
 
- useEffect(() => {
-  const obtenerStorge = () =>{
-    const obtenerUsuarios = JSON.parse(localStorage.getItem('usuarios')) || []
+  useEffect(() => {
+    const obtenerStorge = () => {
+      const obtenerUsuarios = JSON.parse(localStorage.getItem('usuarios')) || []
 
-    setUsuarios(obtenerUsuarios)
-  }
-  obtenerStorge()
- },[])
+      setUsuarios(obtenerUsuarios)
+    }
+    obtenerStorge()
+  }, [])
 
- useEffect(()=> {
-  if(usuarios.length > 0){
-    localStorage.setItem('usuarios',JSON.stringify(usuarios))
-  }
- },[usuarios])
+  useEffect(() => {
+    if (usuarios.length > 0) {
+      localStorage.setItem('usuarios', JSON.stringify(usuarios))
+    }
+  }, [usuarios])
 
   return (
     <>
       <Navigator />
       <Rutas
         usuario={usuario}
-        setUsuario={setUsuario} 
+        setUsuario={setUsuario}
         usuarios={usuarios}
         setUsuarios={setUsuarios}
+        logueado={logueado}
+        setLogueado={setLogueado}
       />
       <Footer />
     </>

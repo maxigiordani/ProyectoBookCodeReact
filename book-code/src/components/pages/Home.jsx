@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Form, Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import imgUno from '../../img/imgCarousel/libroEstrellasDelMundial.png';
 import imgDos from '../../img/imgCarousel/libroElHombreEnBuscaDeSentido.png';
@@ -10,11 +11,19 @@ import '../../stylesheet/Home.css';
 
 function Home() {
   const [home, setHome] = useState([]);
+  const [buscar, setBuscar] = useState('');
+
+  const handleBusqueda = () => {
+    const buscarLibros = libros.filter(l =>
+      l.titulo.toLowerCase().includes(buscar.toLowerCase())
+    );
+
+    setHome(buscarLibros);
+  };
 
   useEffect(() => {
     setHome(libros);
   }, []);
-
 
   return (
     <>
@@ -32,6 +41,16 @@ function Home() {
         <h2 className="disenoTitulo ms-4 d-flex justify-content-center mb-5">
           Libros disponibles
         </h2>
+        <Form className="d-flex w-50 mb-4">
+          <Form.Control
+            type="search"
+            placeholder="Search"
+            className="me-2"
+            aria-label="Search"
+            onChange={(e) => setBuscar(e.target.value)}
+          />
+          <Button variant="outline-success" className='botonBuscar' onClick={() => handleBusqueda()}>Search</Button>
+        </Form>
         <div className='containertarjetas mt-4 mb-4'>
           {home.map((card, index) => (
             <div
@@ -40,14 +59,14 @@ function Home() {
               style={{ width: "12rem" }}
             >
               <img
-                src={card.imgUrl} 
+                src={card.imgUrl}
                 className="card-img-top"
-                alt={`libro: ${card.titulo}`} 
+                alt={`libro: ${card.titulo}`}
               />
               <div className="card-body">
                 <h5 className="mt-2">{card.titulo}</h5>
               </div>
-              <Link to={`/productdetail/${card.ID}`}  className="btn btn-primary disenoBoton">Leer</Link>
+              <Link to={`/productdetail/${card.ID}`} className="btn btn-primary disenoBoton">Leer</Link>
             </div>
           ))}
         </div>
