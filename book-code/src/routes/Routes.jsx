@@ -1,4 +1,4 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import PropTypes from "prop-types";
 import Home from '../components/pages/Home.jsx';
 import ContactUs from '../components/pages/ConctactUs.jsx'
@@ -15,7 +15,7 @@ const Rutas = ({
   setUsuario,
   logueado,
   setLogueado
-}) => { 
+}) => {
 
   return (
     <Routes>
@@ -23,13 +23,13 @@ const Rutas = ({
       <Route path="*" element={<Page404 />} />
       <Route path="/contactus" element={
         <ProtectorRutas logueado={logueado} >
-            <ContactUs nombre="Nombre:" correo="Correo:" mensaje="Mensaje:" />
+          <ContactUs nombre="Nombre:" correo="Correo:" mensaje="Mensaje:" />
         </ProtectorRutas>} />
       <Route path="/productdetail/:id" element={
-        <ProtectorRutas logueado = {logueado}>
-            <ProductDetail />
-        </ProtectorRutas>}/>
-      <Route path="/login" element={<Login setUsuario={setUsuario} logueado = {logueado} setLogueado = {setLogueado} />} />
+        <ProtectorRutas logueado={logueado}>
+          <ProductDetail />
+        </ProtectorRutas>} />
+      <Route path="/login" element={<Login setUsuario={setUsuario} logueado={logueado} setLogueado={setLogueado} />} />
       <Route path="/register" element={<Register usuario={usuario} usuarios={usuarios} setUsuarios={setUsuarios} />} />
     </Routes>
   );
@@ -40,8 +40,8 @@ Rutas.propTypes = {
   setUsuario: PropTypes.func,
   usuarios: PropTypes.array,
   setUsuarios: PropTypes.func,
-  logueado : PropTypes.bool,
-  setLogueado : PropTypes.func
+  logueado: PropTypes.bool,
+  setLogueado: PropTypes.func
 };
 
 export default Rutas;

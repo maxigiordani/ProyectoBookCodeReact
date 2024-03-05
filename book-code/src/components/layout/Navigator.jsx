@@ -21,7 +21,7 @@ const Navigator = ({logueado, setLogueado}) => {
     <>
       <Navbar expand="lg" className="bg-white">
         <Container fluid>
-          <Navbar.Brand href=""onClick={() => navigate("/")}><img src={imgLogo} className='imgLogo' alt='logoBookCode'></img></Navbar.Brand>
+          <Navbar.Brand href="" onClick={() => navigate("/")}><img src={imgLogo} className='imgLogo' alt='logoBookCode'></img></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav

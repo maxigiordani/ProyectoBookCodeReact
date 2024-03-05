@@ -1,16 +1,14 @@
-import { Link, useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
-import { useState,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import '../../stylesheet/Login.css';
-import PropTypes  from "prop-types";
+import PropTypes from "prop-types";
 
-function Login({setUsuario, logueado, setLogueado}) {
+function Login({ setUsuario, logueado, setLogueado }) {
 
   const [email, setEmail] = useState('')
   const [contrasena, setContrasena] = useState('')
-
-  const  navigate = useNavigate()
-  
+  const navigate = useNavigate()
 
   useEffect(() => {
     const valorStorage = JSON.parse(localStorage.getItem('usuarios'))
@@ -20,7 +18,7 @@ function Login({setUsuario, logueado, setLogueado}) {
       setContrasena('')
     }
   }, [])
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const valorStorage = JSON.parse(localStorage.getItem('usuarios'));
@@ -82,15 +80,15 @@ function Login({setUsuario, logueado, setLogueado}) {
         </div>
       </div>
     </div>
-    
-);
-    
+
+  );
+
 }
 
 Login.propTypes = {
   usuario: PropTypes.object,
   setUsuario: PropTypes.func,
-  logueado : PropTypes.bool,
+  logueado: PropTypes.bool,
   setLogueado: PropTypes.func
 }
 
