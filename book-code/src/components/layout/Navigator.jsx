@@ -13,7 +13,7 @@ const Navigator = ({logueado, setLogueado}) => {
   const handleLogueado = () => {
     setLogueado(false)
 
-    navigate('/')
+    navigate('/login')
   }
 
 
