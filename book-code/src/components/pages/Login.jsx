@@ -14,7 +14,7 @@ function Login({setUsuario, logueado, setLogueado}) {
 
   useEffect(() => {
     const valorStorage = JSON.parse(localStorage.getItem('usuarios'))
-
+   
     if (valorStorage && valorStorage.length > 0) {
       setEmail('')
       setContrasena('')
@@ -26,6 +26,7 @@ function Login({setUsuario, logueado, setLogueado}) {
     const valorStorage = JSON.parse(localStorage.getItem('usuarios'));
     if (valorStorage) {
       const usuarioEncontrado = valorStorage.find(usuario => usuario.email === email && usuario.contrasena === contrasena);
+      
       if (usuarioEncontrado) {
         setUsuario(usuarioEncontrado);
         setLogueado(true);
@@ -38,13 +39,8 @@ function Login({setUsuario, logueado, setLogueado}) {
     }
  }
  const contenidoLogin = logueado ? (
-  <div>
-    <p>Bienvenido, {email}!</p>
-    <button onClick={() => {
-      setLogueado(false);
-      navigate('/login');
-    }}>Cerrar sesión</button>
-  </div>
+  navigate('/')
+ 
 ) : (
   
   <form onSubmit={handleSubmit}>
