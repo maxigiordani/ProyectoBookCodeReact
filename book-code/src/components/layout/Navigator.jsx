@@ -1,13 +1,21 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import PropTypes from 'prop-types'
 import '../../stylesheet/Navigator.css'
 import { useNavigate } from "react-router-dom"
 import imgLogo from '../../img/logos/logo.png'
 
-const Navigator = () => {
+const Navigator = ({logueado, setLogueado}) => {
 
   const navigate = useNavigate()
+
+  const handleLogueado = () => {
+    setLogueado(false)
+
+    navigate('/login')
+  }
+
 
   return (
     <>
@@ -22,13 +30,17 @@ const Navigator = () => {
               navbarScroll
             >
               <Nav.Link href="" className='tamanoLetra' onClick={() => navigate("/contactus")}>Contacto</Nav.Link>
-              <Nav.Link href="" className='tamanoLetra' onClick={() => navigate("/login")}>Iniciar sesión</Nav.Link>
+              <Nav.Link href=""className='tamanoLetra' onClick={handleLogueado}>{!logueado ? 'Iniciar Sesión' : 'Cerrar Sesión'}</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
   )
+}
+Navigator.propTypes = {
+  logueado: PropTypes.bool,
+  setLogueado: PropTypes.func
 }
 
 export default Navigator

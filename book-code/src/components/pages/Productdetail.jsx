@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import '../../stylesheet/ProductDetail.css';
@@ -102,5 +102,6 @@ function ProductDetail() {
     </>
   );
 }
+
 
 export default ProductDetail;
