@@ -12,7 +12,7 @@ function Login({ setUsuario, logueado, setLogueado }) {
 
   useEffect(() => {
     const valorStorage = JSON.parse(localStorage.getItem('usuarios'))
-
+   
     if (valorStorage && valorStorage.length > 0) {
       setEmail('')
       setContrasena('')
@@ -24,6 +24,7 @@ function Login({ setUsuario, logueado, setLogueado }) {
     const valorStorage = JSON.parse(localStorage.getItem('usuarios'));
     if (valorStorage) {
       const usuarioEncontrado = valorStorage.find(usuario => usuario.email === email && usuario.contrasena === contrasena);
+      
       if (usuarioEncontrado) {
         setUsuario(usuarioEncontrado);
         setLogueado(true);
@@ -34,44 +35,39 @@ function Login({ setUsuario, logueado, setLogueado }) {
         alert('Email o contraseña incorrectos');
       }
     }
-  }
-  const contenidoLogin = logueado ? (
-    <div>
-      <p>Bienvenido/a! {email}!</p>
-      <button onClick={() => {
-        setLogueado(false);
-        navigate('/login');
-      }}>Cerrar sesión</button>
-    </div>
-  ) : (
-
-    <form onSubmit={handleSubmit}>
-      <div className="card-body">
-        <div className="mb-3 text-center">
-          <FaUser className="user-icon" size={50} />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="usuario" className="form-label textologin">Email</label>
-          <input type="text" className="form-control" id="usuario" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="contrasena" className="form-label textologin">Contraseña</label>
-          <input type="password" className="form-control" id="contrasena" value={contrasena} onChange={(e) => setContrasena(e.target.value)} required />
-        </div>
-        <div className="mb-2 form-check form-check-inline d-flex align-items-center justify-content-center">
-          <input type="checkbox" className="form-check-input" id="recordar" />
-          <label className="form-check-label mx-2" htmlFor="recordar">Recordar sesión</label>
-        </div>
-        <div className="mb-4 text-center">
-          <button type="submit" className="btn botonlogin btn-block">Iniciar sesión</button>
-          <div className="mt-3">
-            <Link to="/register" className='mensajelogin'>¿Aún no tienes cuenta?, ¡regístrate!</Link>
+ }
+ const contenidoLogin = logueado ? (
+  navigate('/')
+ 
+) : (
+  
+  <form onSubmit={handleSubmit}>
+          <div className="card-body">
+            <div className="mb-3 text-center">
+              <FaUser className="user-icon" size={50} />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="usuario" className="form-label textologin">Email</label>
+              <input type="text" className="form-control" id="usuario" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="contrasena" className="form-label textologin">Contraseña</label>
+              <input type="password" className="form-control" id="contrasena" value={contrasena} onChange={(e) => setContrasena(e.target.value)} required />
+            </div>
+            <div className="mb-2 form-check form-check-inline d-flex align-items-center justify-content-center">
+              <input type="checkbox" className="form-check-input" id="recordar" />
+              <label className="form-check-label mx-2" htmlFor="recordar">Recordar sesión</label>
+            </div>
+            <div className="mb-4 text-center">
+              <button type="submit" className="btn botonlogin btn-block">Iniciar sesión</button>
+              <div className="mt-3">
+                <Link to="/register" className='mensajelogin'>¿Aún no tienes cuenta?, ¡regístrate!</Link>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </form>
-
-  )
+        </form>
+ 
+)
 
   return (
     <div className="container containerlogin mt-5 mb-5">

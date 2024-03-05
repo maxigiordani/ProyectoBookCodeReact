@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <Navigator />
+      <Navigator logueado = {logueado} setLogueado= {setLogueado} />
       <Rutas
         usuario={usuario}
         setUsuario={setUsuario}

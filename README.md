@@ -2,7 +2,7 @@
 
 ### 💻 Práctica de maquetado y diseño con la implemetación de React
 
-### Equipo: Georgina Costilla, Juan Lasalle y Maxi Giordani
+### Equipo: Georgina Costilla, Juan Lassalle y Maxi Giordani
 
 ### Tecnologías utilizadas
 
