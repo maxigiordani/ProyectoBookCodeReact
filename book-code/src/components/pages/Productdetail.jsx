@@ -1,5 +1,5 @@
-import { Container, Form, Row, Col } from 'react-bootstrap';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import '../../stylesheet/ProductDetail.css';
 import usuario1 from '../../img/usuario1.jpg';
@@ -24,41 +24,42 @@ function ProductDetail() {
   };
 
   return (
-   <>
-   <h1 className="mb-5 mt-5 estilotitulo text-center">{libro.titulo}</h1>
-   <div className=' mt-5 mb-5 text-center'> 
-   <img src={getLibroImage()} alt="Portada del Libro" className='imagenportada'  />
-   </div>
+    <>
+      <h1 className="mb-5 mt-5 estilotitulo text-center">{libro.titulo}</h1>
+      <div className=' mt-5 mb-5 text-center'> 
+        <img src={getLibroImage()} alt="Portada del Libro" className='imagenportada' />
+      </div>
 
-   <div className=' container descripcionlibros text-center'>
-                <h3 className='h2 mt-3'>INFORMACION DEL LIBRO: </h3>
-                <p className="estiloparrafo">Autor: {libro.autor}</p>
-                <p className="estiloparrafo">Genéro: {libro.genero}</p>
-                <p className="estiloparrafo">Descripción : {libro.descripcion}</p>
-                <p className="estiloparrafo">Editorial: {libro.editorial}</p>
-                <p className="estiloparrafo">Idioma: {libro.idioma}</p>
-                <div className="justify-content-center">
-                  <a href={libro.url} className="boton-descarga mb-2">
-                    Descargar libro PDF
-                  </a>
-                </div>
-              </div>
+      <div className='container descripcionlibros text-center'>
+        <h3 className='h2 mt-3'>INFORMACION DEL LIBRO: </h3>
+        <p className="estiloparrafo">Autor: {libro.autor}</p>
+        <p className="estiloparrafo">Género: {libro.genero}</p>
+        <p className="estiloparrafo">Descripción: {libro.descripcion}</p>
+        <p className="estiloparrafo">Editorial: {libro.editorial}</p>
+        <p className="estiloparrafo">Idioma: {libro.idioma}</p>
+        <div className="justify-content-center">
+          <a href={libro.url} className="boton-descarga mb-2">
+            Descargar libro PDF
+          </a>
+        </div>
+      </div>
+
       <Container className="mt-5 containerdetail">
         <Row className="imagenportada">
           {!libro ? (
             <h2>No Hay Libros</h2>
           ) : (
             <div>
-              <Col md={5} className="imagenportada"
+              <Col md={5} className="imagenportada">
                 <div className="libro-animado">
                   <img src={libroanimado} alt="Libro Animado" />
                 </div>
               </Col>
-             
             </div>
           )}
         </Row>
       </Container>
+
       <Container className="mt-5 containercomentarios mb-5">
         <h1 className="text-center">Comentarios</h1>
         <Form className="form-group">
@@ -80,7 +81,7 @@ function ProductDetail() {
               <small className="text-muted">Hace 30 minutos</small>
             </div>
           </div>
-          <div className=" cardestilo">
+          <div className="cardestilo">
             <div className="card-body cardcuerpo">
               <img src={usuario2} alt="Foto de Perfil" className="rounded-circle usuarioimagen" />
               <h2>Patricia Perez</h2>
@@ -101,4 +102,5 @@ function ProductDetail() {
     </>
   );
 }
+
 export default ProductDetail;
