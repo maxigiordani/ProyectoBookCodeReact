@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Form } from 'react-bootstrap';
+import { Container, Form, Row, Col } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../stylesheet/ProductDetail.css';
 import usuario1 from '../../img/usuario1.jpg';
@@ -24,10 +24,9 @@ function ProductDetail() {
   };
 
   return (
-    <>
-      <h1 className="mb-5 mt-5 estilotitulo text-center">{libro.titulo}</h1>
-
-    <div className=' mt-5 mb-5 text-center'> 
+   <>
+   <h1 className="mb-5 mt-5 estilotitulo text-center">{libro.titulo}</h1>
+   <div className=' mt-5 mb-5 text-center'> 
    <img src={getLibroImage()} alt="Portada del Libro" className='imagenportada'  />
    </div>
 
@@ -44,16 +43,13 @@ function ProductDetail() {
                   </a>
                 </div>
               </div>
-
-  
       <Container className="mt-5 containerdetail">
         <Row className="imagenportada">
           {!libro ? (
             <h2>No Hay Libros</h2>
           ) : (
             <div>
-              <Col md={5} className="imagenportada">
-               
+              <Col md={5} className="imagenportada"
                 <div className="libro-animado">
                   <img src={libroanimado} alt="Libro Animado" />
                 </div>
@@ -105,5 +101,4 @@ function ProductDetail() {
     </>
   );
 }
-
 export default ProductDetail;

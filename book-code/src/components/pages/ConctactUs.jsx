@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import imgBanner from "../../img/imgBanner.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,14 +9,14 @@ import {
 import "../../stylesheet/Contactus.css";
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
-import WeatherWidget from "../helpers/WeatherWidget"; 
+import WeatherWidget from "../helpers/WeatherWidget";
 
 function ContactUs({ nombre, correo, mensaje }) {
   return (
     <>
-    <div className="text-center mt-4">
-        <WeatherWidget />   
-    </div>
+      <div className="text-center mt-4">
+        <WeatherWidget />
+      </div>
       <Container className="containerform mt-5 mb-5 formulario">
         <h1 className="text-center mt-2">CONTÁCTENOS</h1>
         <Row>

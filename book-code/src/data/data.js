@@ -1,14 +1,14 @@
 export const libros = [
     {
         ID: 1,
-        titulo: "TYALOR",
+        titulo: "TAYLOR",
         autor: "Anonimo",
         genero: "Biografía",
         descripcion: "Por primera vez; Taylor llega a Latinoamérica y es un punto de inflexión para toda una generación que lleva años esperando disfrutar de sus canciones en vivo y poder tenerla cerca. Por fin llegó lo que tanto deseábamos y nos gustaría tener una enorme caja fuerte para guardar este momento tan valioso; un espacio seguro para conservar nuestros recuerdos más preciados para siempre. Estas páginas intentan convertirse en ese rincón para preservar las mejores eras vividas.",
         imgUrl: "src/data/imgBook-cards/libroTaylor.png",
         editorial: "Brugera (2023)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
 
@@ -20,7 +20,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/misDiasenlaLibreria.png",
         editorial: "Plata (2023)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 3,
@@ -31,7 +31,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroRosario.png",
         editorial: "Sudamericana (2023)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 4,
@@ -42,7 +42,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroSpreen.png",
         editorial: "Montana (2023)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 5,
@@ -53,7 +53,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroElartedeViajar.png",
         editorial: "Fondo de Cultura Económica (2002)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 6,
@@ -64,7 +64,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroVidaReal.png",
         editorial: "CHAI EDITORA (2016)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 7,
@@ -75,7 +75,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroCuadra.png",
         editorial: "Random House (2016)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 8,
@@ -86,7 +86,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroDiariodeunaSoledad.png",
         editorial: "Gallo Nero Ediciones (2021)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 9,
@@ -97,7 +97,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroBritney.jpg",
         editorial: "Simon Schuster (21 octubre 2023)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 10,
@@ -108,7 +108,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroEstedolorNoesmio.png",
         editorial: "Gaia (2017)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 11,
@@ -119,7 +119,7 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroLanata.png",
         editorial: "Sudamericana (2023)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     },
     {
         ID: 12,
@@ -130,6 +130,6 @@ export const libros = [
         imgUrl: "src/data/imgBook-cards/libroElpoderdelasPalabras.png",
         editorial: "Debate (2022)",
         idioma: "español",
-        url:"https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
+        url: "https://docs.google.com/document/d/1V5m4asvT6F_Er0s8QtRcuOKUGXOhhJJAULoWbR7JZkw/edit"
     }
 ]
