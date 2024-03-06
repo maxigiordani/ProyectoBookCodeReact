@@ -2,7 +2,6 @@ import { Form, Button, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
-import Error from './Error';
 import '../../stylesheet/Register.css';
 import PropTypes from "prop-types";
 
@@ -11,8 +10,6 @@ function Register({ usuario, usuarios, setUsuarios }) {
   const [apellido, setApellido] = useState('')
   const [email, setEmail] = useState('')
   const [contrasena, setContrasena] = useState('')
-
-  const [error, setError] = useState(false)
 
   useEffect(() => {
     // tiene al menos un propiedad definida
@@ -34,13 +31,10 @@ function Register({ usuario, usuarios, setUsuarios }) {
   const handleFormSubmit = (e) => {
     e.preventDefault(); // Evitar que el formulario se envíe automáticamente  
     if ([nombre, apellido, email, contrasena].includes('')) {
-      console.log('Hay al menos un campo vacio')
-      setError(true)
 
       return
     }
 
-    setError(false)
     // Crea el registro de usuario
     const registro = {
       nombre,
@@ -50,8 +44,6 @@ function Register({ usuario, usuarios, setUsuarios }) {
     }
     registro.id = generarId()
     setUsuarios([...usuarios, registro])
-
-    console.log(registro.id)
 
     //Resetea el formulario
     setNombre('')
@@ -78,7 +70,6 @@ function Register({ usuario, usuarios, setUsuarios }) {
           </div>
           <div>
             <Form onSubmit={handleFormSubmit}>
-              {error ? <Error><p>Los campos están vacíos</p></Error> : ''}
               <Row className="mb-3">
                 <Col xs={12} sm={6}>
                   <Form.Label htmlFor="nombre">nombre</Form.Label>
